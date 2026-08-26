@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Chakna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="snack-field" aria-hidden="true"></div>
+  <main class="app">
+    <header class="top">
+      <div class="brand-mark">Chak<span>n</span>a</div>
+    </header>
+
+    <section id="gate" class="screen on">
+      <p class="eyebrow">India drinks with food</p>
+      <h1>What are you pouring. What sits next to it.</h1>
+      <p class="lede">Pick a bottle. Get chakna. Light snacks, veg, non-veg. Classic or lighter.</p>
+      <div class="gate-card">
+        <p>You need to be of legal drinking age in your state to use Chakna.</p>
+        <button class="primary" id="enter">I am 21 or older</button>
+        <p class="note">Legal age is 18, 21 or 25 depending on the state. This is a pairing guide, not a shop.</p>
+      </div>
+    </section>
+
+    <section id="home" class="screen">
+      <p class="eyebrow">Start here</p>
+      <h2>What are you drinking tonight?</h2>
+      <p class="lede">Whisky to wine. IMFL and imported names you actually find in a metro shop.</p>
+      <div class="grid" id="types"></div>
+    </section>
+
+    <section id="brands" class="screen">
+      <div class="top" style="margin:0 0 8px;padding:0">
+        <button class="ghost" id="back-home">Back</button>
+      </div>
+      <p class="eyebrow">Brand</p>
+      <h2 id="brands-title">Brands</h2>
+      <input class="search" id="q" type="search" placeholder="Search a brand" />
+      <div class="filters" id="origins">
+        <button class="chip on" data-origin="all">All</button>
+        <button class="chip" data-origin="imfl">IMFL</button>
+        <button class="chip" data-origin="indian">Indian craft</button>
+        <button class="chip" data-origin="imported">Imported</button>
+      </div>
+      <div id="brand-list"></div>
+    </section>
+
+    <section id="serve" class="screen">
+      <div class="top" style="margin:0 0 8px;padding:0">
+        <button class="ghost" id="back-brands">Back</button>
+      </div>
+      <p class="crumb" id="serve-crumb"></p>
+      <p class="eyebrow">Serve</p>
+      <h2>How are you having it?</h2>
+      <p class="lede">This changes the plate more than the exact bottle.</p>
+      <div class="stack" id="serve-list"></div>
+    </section>
+
+    <section id="diet" class="screen">
+      <div class="top" style="margin:0 0 8px;padding:0">
+        <button class="ghost" id="back-serve">Back</button>
+      </div>
+      <p class="crumb" id="diet-crumb"></p>
+      <p class="eyebrow">Plate</p>
+      <h2>What do you want on the table?</h2>
+      <div class="stack" id="diet-list">
+        <button class="diet-btn" data-diet="all">Show all</button>
+        <button class="diet-btn" data-diet="light">Light snacks</button>
+        <button class="diet-btn" data-diet="veg">Veg starters</button>
+        <button class="diet-btn" data-diet="nonveg">Non-veg starters</button>
+      </div>
+    </section>
+
+    <section id="results" class="screen">
+      <div class="top" style="margin:0 0 8px;padding:0">
+        <button class="ghost" id="back-diet">Back</button>
+      </div>
+      <p class="crumb" id="result-crumb"></p>
+      <h2 id="result-title">Pairings</h2>
+      <div class="mode-toggle" id="modes">
+        <button class="on" data-mode="classic">Classic</button>
+        <button data-mode="lighter">Lighter</button>
+      </div>
+      <div id="results-body"></div>
+      <p class="note">Pairings are suggestions. Drink water. Eat something. Age rules change by state.</p>
+    </section>
+  </main>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
